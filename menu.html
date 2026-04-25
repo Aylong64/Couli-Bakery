@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>COULi Bakery — Menu</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><img src="logo.png" alt="COULi Bakery Logo"></a>
+        <nav class="navigate">
+            <ul>
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="menu"><i class="fas fa-bars"></i></div>
+    </header>
+
+    
+    <section class="service page-section">
+        <h1 class="title">Our <span>Menu</span></h1>
+        <div class="cake-list">
+            <a class="btn1 active" data-src="img1.png">Cakes</a>
+            <a class="btn1" data-src="do.png">Donuts</a>
+            <a class="btn1" data-src="bgcu.png">Cupcakes</a>
+            <a class="btn1" data-src="cok.png">Cookies</a>
+        </div>
+        <div class="cake-row">
+            <div class="image">
+                <img src="img1.png" id="cake-img" alt="Menu item">
+            </div>
+            <div class="cake-content">
+                <div class="cake-info">
+                    <h3>Bless your tastebuds with sweet pastries &nbsp;<i class="fas fa-birthday-cake"></i></h3>
+                    <a><i class="fas fa-hand-point-right"></i> German Fruit Cake<br></a>
+                    <a><i class="fas fa-hand-point-right"></i> Lemon Pound Cake<br></a>
+                    <a><i class="fas fa-hand-point-right"></i> Cookies<br></a>
+                    <a><i class="fas fa-hand-point-right"></i> Chocolate Pound Cake<br></a>
+                    <a><i class="fas fa-hand-point-right"></i> Donuts & More<br></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <p>© 2026 COULi Bakery · Lagos, Nigeria · <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="nav.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.service .cake-list .btn1').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                let src = $(this).attr('data-src');
+                $('#cake-img').attr('src', src);
+            });
+        });
+    </script>
+</body>
+</html>
